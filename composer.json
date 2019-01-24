@@ -1,5 +1,5 @@
 {
-    "name": "symfony/monolog-bundle",
+    "name": "fdm/monolog-bundle",
     "type": "symfony-bundle",
     "description": "Symfony MonologBundle",
     "keywords": ["log", "logging"],
