@@ -11,6 +11,7 @@
 
 namespace Symfony\Bundle\MonologBundle\DependencyInjection;
 
+use Symfony\Component\ExpressionLanguage\Expression;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
