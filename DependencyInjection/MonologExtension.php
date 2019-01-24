@@ -321,9 +321,14 @@ class MonologExtension extends Extension
                     throw new \RuntimeException('The \Predis\Client is not available.');
                 }
             }
+            $keyname = (
+                0 === strpos($handler['redis']['key_name'], '@=') ?
+                $container->resolveServices(new Expression(substr($handler['redis']['key_name'], 2))) :
+                $handler['redis']['key_name']
+            );                
             $definition->setArguments(array(
                 new Reference($clientId),
-                $handler['redis']['key_name'],
+                $keyname,
                 $handler['level'],
                 $handler['bubble'],
             ));
